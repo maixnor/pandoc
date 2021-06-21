@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: arch-latest
+    runs-on: arch
 
     steps:
       - uses: actions/checkout@v2
