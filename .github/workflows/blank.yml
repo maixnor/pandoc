@@ -1,0 +1,25 @@
+name: Pandoc
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: arch-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Pandoc
+        run: sudo pacman -Syu pandoc 
+
+      - name: Create PDF using pandoc and the LaTeX PDF engine
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+
